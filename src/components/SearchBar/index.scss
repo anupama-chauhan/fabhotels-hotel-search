@@ -1,0 +1,74 @@
+@import "src/styles/variables";
+
+.search-container{
+  min-height: 650px;
+  width: 100%;
+  display: flex;
+  //align-items: center;
+  justify-content: center;
+  background: url("../../assets/fab-hotels-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow:inset 0 0 0 2000px rgba(4, 10, 38, 0.5);
+
+
+  .search-bar{
+    position: relative;
+    margin-top: 100px;
+
+    input{
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      min-width: 500px;
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .suggestion-dropdown{
+      position: absolute;
+      //z-index: 1;
+      border: 1px solid $lightGrey;
+      background-color: $white;
+      top: 50px;
+      left: 0;
+      width: 550px;
+
+      .category{
+        h2{
+          background-color: #f1f2f5;
+          padding: 10px 20px;
+          color: $black;
+          font-size: $largeFont;
+          font-weight: 600;
+          //border-top-left-radius: 5px;
+          //border-top-right-radius: 5px;
+        }
+
+        a{
+          text-decoration: none;
+          i{
+            color: darkgray;
+            margin-right: 10px;
+          }
+        }
+
+        ul{
+          li{
+            padding: 0 20px;
+            margin-bottom: 20px;
+            &:first-child{
+            margin-top: 20px;
+
+              span{
+                font-size: $medFont;
+              }
+          }
+          }
+        }
+      }
+    }
+
+  }
+}
